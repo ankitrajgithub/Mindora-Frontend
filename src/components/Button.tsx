@@ -8,7 +8,5 @@ export interface ButtonProps {
 }
 
 export const Button=(props:ButtonProps)=>{
-    return <button></button>
+    return <button>{props.text}</button>
 }
-
-<Button variant="primary" size="sm" text="Hello" startIcon="" endIcon="" onClick={()=>{}}></Button>
