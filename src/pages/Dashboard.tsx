@@ -6,7 +6,6 @@ import { PlusIcon } from "../icons/PlusIcon"
 import { ShareIcon } from "../icons/ShareIcon"
 import { Sidebar } from "../components/Sidebar"
 import { useContent } from "../hooks/useContent"
-import { BACKEND_URL } from "../config"
 import axios from "axios"
 
 export function Dashboard() {
@@ -26,9 +25,9 @@ export function Dashboard() {
       <div className="flex justify-end gap-4">
         <Button onClick={() => {
           setModalOpen(true)
-        }} variant="primary" text="Add content" startIcon={<PlusIcon />}></Button>
+        }} variant="primary" text="Add content" startIcon={<PlusIcon size="md" />}></Button>
         <Button onClick={async () => {
-            const response = await axios.post(`${BACKEND_URL}/api/v1/brain/share`, {
+            const response = await axios.post(`${process.env.BACKEND_URL}/api/v1/brain/share`, {
                 share: true
             }, {
                 headers: {
