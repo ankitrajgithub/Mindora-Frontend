@@ -1,15 +1,15 @@
 import { ReactElement } from "react";
 
-export function SidebarItems({text, icon}:{
-    text:string,
-    icon:ReactElement
-}){
-    return <div className="flex items-center text-gray-700 ">
-        <div className="p-2">
+export function SidebarItems({text, icon}: {
+    text: string;
+    icon: ReactElement;
+}) {
+    return <div className="flex text-gray-700 py-2 cursor-pointer hover:bg-gray-200 rounded max-w-48 pl-4 transition-all duration-150 items-center">
+        <div className="pr-2">
             {icon}
         </div>
-        <div className="p-2">
-            {text}
+        <div>
+         {text}
         </div>
     </div>
 }
