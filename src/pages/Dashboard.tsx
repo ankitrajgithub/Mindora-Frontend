@@ -27,7 +27,7 @@ export function Dashboard() {
           setModalOpen(true)
         }} variant="primary" text="Add content" startIcon={<PlusIcon size="md" />}></Button>
         <Button onClick={async () => {
-            const response = await axios.post(`${process.env.BACKEND_URL}/api/v1/brain/share`, {
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/brain/share`, {
                 share: true
             }, {
                 headers: {

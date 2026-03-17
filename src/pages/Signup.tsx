@@ -11,9 +11,9 @@ export function Signup() {
 
     async function signup() {
         const username = usernameRef.current?.value;
-        console.log(usernameRef.current)
         const password = passwordRef.current?.value;
-        await axios.post(process.env.BACKEND_URL + "/api/v1/signup", {
+        console.log(import.meta.env.VITE_BACKEND_URL + "/api/v1/signup");
+        await axios.post(import.meta.env.VITE_BACKEND_URL + "/api/v1/signup", {
             username,
             password
         })

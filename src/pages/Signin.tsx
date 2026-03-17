@@ -1,8 +1,6 @@
 import { useRef } from "react";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
-import dotenv from "dotenv";
-dotenv.config();
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +13,7 @@ export function Signin() {
         const username = usernameRef.current?.value;
         console.log(usernameRef.current)
         const password = passwordRef.current?.value;
-        const response = await axios.post(process.env.BACKEND_URL + "/api/v1/signin", {
+        const response = await axios.post(import.meta.env.VITE_BACKEND_URL + "/api/v1/signin", {
             username,
             password
         })
